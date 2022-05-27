@@ -8,7 +8,8 @@ import com.sachinsandbhor.proficiencyexercise.data.entities.Row
 
 @Database(
     entities = [Row::class],
-    version = 1
+    version = 1,
+    exportSchema = false
 )
 abstract class ArticleDatabase : RoomDatabase(){
 
@@ -28,7 +29,7 @@ abstract class ArticleDatabase : RoomDatabase(){
             Room.databaseBuilder(
                 context.applicationContext,
                 ArticleDatabase::class.java,
-                "article_db.db"
+                "article.db"
             ).build()
     }
 }
