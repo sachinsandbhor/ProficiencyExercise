@@ -24,9 +24,9 @@ class RetrofitInstance {
                 .client(client)
                 .build()
         }
-    }
 
-    val api by lazy {
-        retrofit.create(ArticleApi::class.java)
+        val api by lazy {
+            retrofit.create(ArticleApi::class.java)
+        }
     }
 }
